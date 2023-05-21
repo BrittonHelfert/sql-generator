@@ -2,8 +2,6 @@ import { useState } from "react"
 import CodeDisplay from "./components/CodeDisplay"
 import MessagesDisplay from "./components/MessagesDisplay"
 
-const API_KEY: string = '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'
-
 interface ChatData {
   role: string,
   content: string
