@@ -1,13 +1,150 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap');
+
+* {
+  font-family: Verdana, Tahoma, sans-serif;
+  color: rgb(34, 34, 34);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p, input {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(200, 200, 200);
+}
+
+.app {
+  height: 80vh;
+  width: 80vh;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  box-shadow: rgba(0,0,0, 0.16), 0 2px 4px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgb(34,34,34);
+}
+
+.code-display {
+  width: 96%;
+  margin: 2%;
+  height: 46%;
+  border-radius: 8px;
+  background-color: rgb(34,34,34);
+  overflow: hidden;
+}
+
+.code-output {
+  margin: 20px;
+}
+
+.code-output p {
+  color: rgb(255, 189, 45);
+}
+
+.buttons {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(50,50,50);
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.button.first {
+  background-color: rgb(255, 96, 86);
+}
+
+.button.second {
+  background-color: rgb(255, 189, 45);
+}
+
+.button.third {
+  background-color: rgb(38, 201, 64);
+}
+
+.messages-display {
+  width: 96%;
+  margin: 2%;
+  height: 46%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(0,0,0);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.message-display {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgb(200, 200, 200);
+  margin: 5px 0;
+}
+
+p#icon {
+  padding: 0 7px;
+}
+
+p#role {
+  padding: 0 7px 0 0;
+}
+
+input {
+  box-sizing: border-box;
+  background-color: rgb(240, 240, 240);
+  border: solid rgba(0,0,0, 0.20) 2px;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 2%;
+}
+
+.button-container {
+  margin: 2%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container button {
+  text-transform: uppercase;
+  padding: 7px;
+  border: none;
+}
+
+button#get-query {
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+  background-color: rgb(255,95,86);
+}
+
+button#clear-chat {
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background-color: rgb(255,189,45);
 }
